@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonction.css">
+    <title>Document</title>
+</head>
+<!-- Écrire un script qui demande à l’utilisateur 2 nombres,
+     et d’afficher le résultat de la multiplication de ces 2
+    nombres au clic sur le bouton “voir résultat 
+    exemple avec 4 et 5: "4 multiplié par 5 vaut 20" -->
+<body>
+    <h1>Multiplication de deux nombre</h1>
+    <input type="number" id="numberX"> <br> <br>
+    <input type="number" id="numberY"> <br> <br>
+     <button onclick="multiplication()"> Voir resultat</button>
+     <div id="result"></div>
+   
+    <script>
+        // declaration
+      function multiplication(){
+        // recuper les valeur  de l'utilisateur
+        var numberX = parseInt(document.getElementById("numberX").value);
+        var numberY = parseInt(document.getElementById("numberY").value);
+        // multiplication
+        var result =  numberX * numberY;
+        // afficher le resultat
+         var result = numberX +    " * "      + numberY +     " =  "   + result;
+        document.getElementById("result").textContent = result;
+      }
+    </script>
+    
+</body>
+</html>
